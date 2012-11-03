@@ -194,7 +194,7 @@ function leaflet_field_formatter_view($entity_type, $entity, $field, $instance, 
           $features[0]['popup'] = entity_label($entity_type, $entity);
         }
 
-        if (!empty($settings['icon']) && isset($settings['icon']['iconUrl'])) {
+        if (!empty($settings['icon']) && !empty($settings['icon']['iconUrl'])) {
           foreach ($features as $key => $feature) {
             $features[$key]['icon'] = $settings['icon'];
           }
